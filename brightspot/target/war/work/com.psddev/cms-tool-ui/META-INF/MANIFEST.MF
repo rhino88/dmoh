@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: hudson
+Build-Jdk: 1.6.0_26
+Dari-ClassFinder-Include: true
+Dari-SourceFilter-JavaSources: /mnt/hudson/jobs/cms-2.1/workspace/tool
+ -ui/src/main/java
+Dari-SourceFilter-WebappSources: /mnt/hudson/jobs/cms-2.1/workspace/to
+ ol-ui/src/main/webapp
+Hudson-Build-Number: 16
+Hudson-Project: cms-2.1
+Hudson-Version: 2.2.0
+
