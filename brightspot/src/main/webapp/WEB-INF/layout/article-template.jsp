@@ -19,20 +19,21 @@
 
     <div class="container">
       <div class="row">
-        <div class="span6">
+        <div class="span9">
             <h1><cms:render value="${mainContent.headline}"/></h1>
             <cms:render value="${mainContent}"></cms:render>
              <div class="span3">
-          <h2>Right Rail</h2>
-          <p>Right Rail content</p>
-          <%  List<Article> articles = Query.from(Article.class).selectAll();
-              pageContext.setAttribute("articles", articles);
-          %>
-          <ul>
-            <c:forEach var="item" items="${articles}">
-            <li><cms:a href="${item}"><cms:render value="${item.headline}" /></cms:a></li>
-            </c:forEach>
-          </ul>
+          <div style="padding:10px;">
+            <h4>All Articles</h4>
+            <%  List<Article> articles = Query.from(Article.class).selectAll();
+                pageContext.setAttribute("articles", articles);
+            %>
+            <ul>
+              <c:forEach var="item" items="${articles}">
+              <li><cms:a href="${item}"><cms:render value="${item.headline}" /></cms:a></li>
+              </c:forEach>
+            </ul>
+          </div>
           <c:choose>
             <c:when test="${!empty mainContent.rightRailModules}">
                 <cms:render value="${mainContent.rightRailModules}" />
@@ -41,8 +42,6 @@
                 <cms:render value="${template.rightRailModules}" />
             </c:otherwise>
           </c:choose>
-            
-
          </div>
       </div>
 

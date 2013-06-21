@@ -8,7 +8,7 @@ import java.util.*;
 import com.psddev.dari.db.Recordable;
 import com.psddev.dari.db.Modification;
 
-@Modification.Classes({Article.class, AllAuthors.class, Author.class})
+@Modification.Classes({Article.class, Author.class})
 public class ExampleModification extends Modification<Object> {
 
 
